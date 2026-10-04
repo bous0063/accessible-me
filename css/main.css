@@ -1,10 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #f1f3f5;
+  color: #1f2933;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
+/* Headings use a different font to create visual hierarchy. */
 h1,
 h2,
 h3,
@@ -12,8 +19,20 @@ h4,
 h5,
 h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+  line-height: 1.2;
 }
 
+h1 {
+  font-size: 2.5rem;
+  margin: 0 1rem 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Keeps the content readable on large screens. */
 .container {
   max-width: 1080px;
   margin: 0 auto;
@@ -24,48 +43,191 @@ img {
   width: 100%;
 }
 
+/* Header styling */
+.site-header {
+  background-color: #17202a;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.site-header h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation */
 .main-nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
   padding: 0;
 }
 
-.main-nav ul li {
-  flex: 1;
-  text-align: center;
+.main-nav li {
+  flex: 1 1 150px;
 }
 
-.main-nav ul li a {
+.main-nav a {
   display: block;
-  color: inherit;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  background-color: #34495e;
+  text-align: center;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.main-nav a:hover {
+  background-color: #4b657d;
+}
+
+.main-nav a:focus-visible {
+  outline: 4px solid #f7dc6f;
+  outline-offset: 3px;
+}
+
+/* Banner image */
+.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+/* Main content */
+main {
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+main section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #c7cdd3;
+}
+
+main section:last-child {
+  border-bottom: none;
+}
+
+/* Links inside the main content */
+main a {
+  color: #0645ad;
+  font-weight: 700;
+}
+
+main a:hover {
+  text-decoration: none;
+}
+
+main a:focus-visible {
+  outline: 3px solid #111111;
+  outline-offset: 3px;
+}
+
+/* Owner information */
+.owner ul {
+  padding-left: 1.5rem;
+}
+
+/* Address */
+address {
+  font-style: normal;
+  line-height: 1.8;
+}
+
+/* Form layout */
+.form-group {
+  margin-bottom: 2rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-weight: 700;
 }
 
 form input,
 form textarea {
   display: block;
   width: 100%;
-  margin-bottom: 1rem;
-  padding: .5rem 1rem;
+  padding: 0.75rem;
+  border: 2px solid #555555;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #111111;
+  font: inherit;
 }
 
 form textarea {
   min-height: 150px;
-  max-height: 150px;
-  height: 150px;
-  resize: none;
+  resize: vertical;
+  margin-bottom: 20px;
 }
 
+button {
+    margin-bottom: 30px;
+}
+
+/* Submit button */
 form button {
-  background: none;
-  border: 2px solid black;
-  padding: 1rem;
-  text-transform: uppercase;
+  background-color: #17202a;
+  color: #ffffff;
+  border: 3px solid #17202a;
+  border-radius: 4px;
+  padding: 0.8rem 1.5rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
 }
 
+form button:hover {
+  background-color: #34495e;
+  border-color: #34495e;
+}
+
+form button:focus-visible {
+  outline: 4px solid #f7dc6f;
+  outline-offset: 3px;
+}
+
+/* Footer */
 .site-footer {
-  padding: 2rem 0;
+  background-color: #17202a;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+
+  .site-header,
+  main {
+    padding: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .main-nav li {
+    flex-basis: 100%;
+  }
+
+  .main-nav a {
+    text-align: left;
+  }
 }
