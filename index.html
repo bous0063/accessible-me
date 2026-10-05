@@ -6,6 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accessible Me</title>
+    <style>
+
+        .skip-link {
+            background: #000;
+            color: #FFF;
+            padding: 8px 16px;
+            position: absolute;
+            top: -999px;
+            left: -999px;
+            z-index: 999;
+        }
+
+        .skip-link:focus {
+            top: 0;
+            left: 0;
+        }
+
+    </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
@@ -13,6 +31,7 @@
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="container">
     <!-- Changed div to header to give the page a clear semantic structure -->
     <header class="site-header"> 
